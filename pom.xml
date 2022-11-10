@@ -19,6 +19,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M7</version>
                 <configuration>
+                    <argLine>--enable-preview</argLine>
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
@@ -27,10 +28,6 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.10.1</version>
-                <configuration>
-                    <release>11</release>
-                    <enablePreview>true</enablePreview>
-                </configuration>
             </plugin>
         </plugins>
     </build>

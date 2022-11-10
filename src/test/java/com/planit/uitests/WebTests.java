@@ -22,7 +22,7 @@ import java.util.NoSuchElementException;
 
 public class WebTests extends BaseTest {
 
-    @Test
+    @Test(description = "Verify contact form has errors when submitted without filling up the required fields.")
     public void TestCase1() throws Exception {
         // From the home page go to contact page
         // Click submit button
@@ -68,7 +68,7 @@ public class WebTests extends BaseTest {
         Assert.assertTrue(contactPage.isFormValid(), "There are still error messages in the form!");
     }
 
-    @Test(invocationCount = 5)
+    @Test(invocationCount = 5, description = "Verify contact form submits successfully when all required fields are filled and submitted.")
     public void TestCase2() throws Exception {
         // From the home page go to contact page
         HomePage homePage = new HomePage(driver);
@@ -85,7 +85,7 @@ public class WebTests extends BaseTest {
         Assert.assertEquals(successMessage, "Thanks " + forenameValue + ", we appreciate your feedback.");
     }
 
-    @Test
+    @Test(description = "Verify sub total and total prices of items in cart.")
     public void TestCase3() throws Exception {
         HashMap<String, Integer> shopItemsToBuy = new HashMap<String, Integer>() {{
             put("Stuffed Frog", 2);

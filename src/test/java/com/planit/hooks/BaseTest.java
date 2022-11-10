@@ -5,7 +5,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
@@ -22,10 +21,16 @@ public class BaseTest implements Test {
         WebDriverManager.chromedriver().setup();
 
         ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--no-sandbox");
+        chromeOptions.addArguments("--disable-dev-shm-usage");
+        chromeOptions.addArguments("--remote-debugging-port=9222");
+        chromeOptions.addArguments("--disable-extensions");
         chromeOptions.addArguments("--headless");
         chromeOptions.addArguments("--start-maximized");
         chromeOptions.addArguments("--window-size=1920,1080");
         driver = new ChromeDriver(chromeOptions);
+
+        // Not headless
         /*driver.manage().window().maximize();*/
 
         WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(20));
