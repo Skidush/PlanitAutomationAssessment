@@ -97,7 +97,11 @@ public class WebTests extends BaseTest {
         // Buy 2 Stuffed Frog, 5 Fluffy Bunny, 3 Valentine Bear
         ShopPage shopPage = new ShopPage(driver).navigate();
         shopItemsToBuy.forEach((item, quantity) -> {
-            shopPage.getShopItem(item).buy(quantity);
+            try {
+                shopPage.getShopItem(item).buy(quantity);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         });
 
         // Go to the cart page
@@ -109,6 +113,8 @@ public class WebTests extends BaseTest {
         shopItemsToBuy.forEach((item, quantity) -> {
             CartItemComponent cartItem = cartPage.getCartItem(item);
             try {
+                cartItem.isLoaded(false);
+
                 Assert.assertEquals(
                         cartItem.getSubtotal(),
                         cartItem.getPrice() * cartItem.getQuantity(),
@@ -119,7 +125,7 @@ public class WebTests extends BaseTest {
                         (double) shopItems.get(item),
                         "The price for " + item + " is incorrect!");
             } catch (Exception e) {
-                throw new RuntimeException(e);
+                    throw new RuntimeException(e);
             }
         });
 

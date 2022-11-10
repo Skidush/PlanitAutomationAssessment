@@ -26,7 +26,11 @@ public class ShopPage extends JupiterToysPage<ShopPage> {
         return new ProductComponent(webDriver, ".//*[./h4[contains(text(),'"+ itemName +"')]]");
     }
 
-    public ProductComponent getShopItem(String productName) {
+    public ProductComponent getShopItem(String productName) throws Exception {
+        if (!_products.containsKey(productName)) {
+            throw new Exception("The item '" + productName + "' is not in the list of shop items! Update the Shop Items CSV to reflect it.");
+        }
+
         return _products.get(productName);
     }
 }

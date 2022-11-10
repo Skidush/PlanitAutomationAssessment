@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93077793-7d3b-4467-b728-3cc10aad96d1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/planit/hooks/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/planit/hooks/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/planit/pageobjects/ShopPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/planit/pageobjects/ShopPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/planit/uitests/WebTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/planit/uitests/WebTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +54,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/rudreshuar/Desktop/PlanIt/PlanitAutomationAssesment/src/test/resources",
+    "last_opened_file_path": "/home/rudreshuar/Desktop/PlanIt/PlanitAutomationAssesment",
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -64,6 +63,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -76,7 +76,7 @@
       <command value="mvn install" />
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.WebTests">
+  <component name="RunManager" selected="TestNG.WebTests.TestCase3">
     <configuration name="WebTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="PlanitAutomationAssesment" />
       <shortenClasspath name="NONE" />
@@ -108,16 +108,27 @@
     </configuration>
     <configuration name="WebTests.Test1" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="PlanitAutomationAssesment" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.planit.uitests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="com.planit.uitests" />
       <option name="MAIN_CLASS_NAME" value="com.planit.uitests.WebTests" />
       <option name="METHOD_NAME" value="Test1" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="--enable-preview" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -126,16 +137,27 @@
     </configuration>
     <configuration name="WebTests.TestCase1" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="PlanitAutomationAssesment" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.planit.uitests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="com.planit.uitests" />
       <option name="MAIN_CLASS_NAME" value="com.planit.uitests.WebTests" />
       <option name="METHOD_NAME" value="TestCase1" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="--enable-preview" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -158,6 +180,7 @@
       <option name="METHOD_NAME" value="TestCase2" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="--enable-preview" />
       <option name="PARAMETERS" value="" />
       <option name="OUTPUT_DIRECTORY" value="" />
       <option name="TEST_SEARCH_SCOPE">
@@ -172,16 +195,27 @@
     </configuration>
     <configuration name="WebTests.TestCase3" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="PlanitAutomationAssesment" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.planit.uitests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="com.planit.uitests" />
       <option name="MAIN_CLASS_NAME" value="com.planit.uitests.WebTests" />
       <option name="METHOD_NAME" value="TestCase3" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="--enable-preview" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -197,9 +231,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.WebTests.TestCase3" />
         <item itemvalue="TestNG.WebTests" />
         <item itemvalue="TestNG.WebTests.TestCase2" />
-        <item itemvalue="TestNG.WebTests.TestCase3" />
         <item itemvalue="TestNG.WebTests.TestCase1" />
         <item itemvalue="TestNG.WebTests.Test1" />
       </list>
