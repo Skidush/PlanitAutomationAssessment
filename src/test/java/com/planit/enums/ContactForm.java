@@ -1,16 +1,30 @@
 package com.planit.enums;
 
-import java.util.HashMap;
-
-public class FormErrors {
-    public enum Contact {
+public class ContactForm {
+    public enum FieldWithError {
         FORENAME("Forename is required"),
         EMAIL("Email is required"),
         MESSAGE("Message is required");
 
         private final String _fieldName;
 
-        Contact(String fieldName) {
+        FieldWithError(String fieldName) {
+            _fieldName = fieldName;
+        }
+
+        public String toString() {
+            return _fieldName;
+        }
+    }
+
+    public enum Fields {
+        FORENAME("text"),
+        EMAIL("email"),
+        MESSAGE("text");
+
+        private final String _fieldName;
+
+        Fields(String fieldName) {
             _fieldName = fieldName;
         }
 

@@ -1,7 +1,7 @@
-package com.planit.pageobjects;
+package com.planit.components;
 
 public interface BaseComponent {
-    public boolean isLoaded(boolean suppressExceptions) throws Exception;
-    public boolean isLoaded() throws Exception;
-    public void waitToLoad() throws Exception;
+    boolean isLoaded(boolean suppressExceptions) throws Exception;
+    boolean isLoaded() throws Exception;
+    void waitToLoad() throws Exception;
 }

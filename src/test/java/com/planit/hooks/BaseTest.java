@@ -1,5 +1,6 @@
-package com.planit.drivers;
+package com.planit.hooks;
 
+import com.planit.drivers.DriverInstance;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,6 +14,7 @@ import java.time.Duration;
 
 public class BaseTest implements Test {
     public WebDriver driver;
+    public static String baseUrl = "https://jupiter.cloud.planittesting.com/#/";
 
     @BeforeMethod
     public void initialize() {
@@ -21,17 +23,16 @@ public class BaseTest implements Test {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
 
-        WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofMinutes(1));
-        FluentWait fluentWait = new FluentWait(driver);
+        WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
         DriverInstance.driver = driver;
         DriverInstance.explicitWait = explicitWait;
 
-        driver.get("https://jupiter.cloud.planittesting.com/#/");
+        driver.get(baseUrl);
     }
 
     @AfterMethod(alwaysRun = true)
     public void tearDown(ITestResult result) throws IOException {
-
+        driver.quit();
     }
 }

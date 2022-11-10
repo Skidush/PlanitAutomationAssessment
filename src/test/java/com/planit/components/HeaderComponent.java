@@ -1,7 +1,9 @@
-package com.planit.pageobjects;
+package com.planit.components;
 
 import com.planit.enums.HeaderButtons.HEADER_LINKS;
 import com.planit.helpers.LazyElement;
+import com.planit.pageobjects.CartPage;
+import com.planit.pageobjects.ContactPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -24,8 +26,9 @@ public class HeaderComponent extends JupiterToysComponent {
                 break;
             case CART:
                 pageOpened = (T) new CartPage(webDriver);
+                break;
             default:
-                System.out.println("oh noe");
+                System.out.println("oh noe: " + headerLinkName);
         }
         return pageOpened;
     }

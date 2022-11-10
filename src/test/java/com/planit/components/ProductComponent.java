@@ -1,4 +1,4 @@
-package com.planit.pageobjects;
+package com.planit.components;
 
 import com.planit.helpers.LazyElement;
 import org.openqa.selenium.By;

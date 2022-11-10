@@ -6,32 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ElementActions {
-    private static WebDriverWait explicitWait;
-    private static WebDriver driver;
-
-    public static void setDriver(WebDriver driver) {
-        ElementActions.driver = driver;
-    }
-
-    public static void setExplicitWait(WebDriverWait explicitWait) {
-        ElementActions.explicitWait = explicitWait;
-    }
-
-    public static void waitToLoad(By by, boolean suppressExceptions) throws Exception {
-        WebElement element = null;
-        Exception exception = null;
-        try {
-            element = explicitWait.until(ExpectedConditions.presenceOfElementLocated(by));
-        } catch (Exception e) {
-            exception = e;
-        }
-
-        if (!suppressExceptions && element == null) {
-            exception = exception != null ? exception : new Exception("The element " + by.toString() + " was not loaded!");
-            throw exception;
-        }
-    }
+public class DriverInstance {
+    public static WebDriverWait explicitWait;
+    public static WebDriver driver;
 
     public static void clickElementByXpath(String elementXpath) {
         WebElement elementByXpath = explicitWait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(elementXpath))));

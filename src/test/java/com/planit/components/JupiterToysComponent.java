@@ -1,13 +1,12 @@
-package com.planit.pageobjects;
+package com.planit.components;
 
 import com.planit.helpers.LazyElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import java.util.Objects;
 
-public class JupiterToysComponent implements BaseComponent {
+public abstract class JupiterToysComponent implements BaseComponent {
     protected final WebDriver webDriver;
 
     public final String parentSelector;
