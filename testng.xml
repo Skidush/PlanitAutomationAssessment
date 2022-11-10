@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="WebTests">
+        <classes>
+            <class name="com.planit.uitests.WebTests">
+                <methods>
+                    <include name="TestCase1"/>
+                    <include name="TestCase2"/>
+                    <include name="TestCase3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
