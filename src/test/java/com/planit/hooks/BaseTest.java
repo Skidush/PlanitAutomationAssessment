@@ -4,6 +4,7 @@ import com.planit.drivers.DriverInstance;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
@@ -20,8 +21,12 @@ public class BaseTest implements Test {
     public void initialize() {
         WebDriverManager.chromedriver().setup();
 
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--start-maximized");
+        chromeOptions.addArguments("--window-size=1920,1080");
+        driver = new ChromeDriver(chromeOptions);
+        /*driver.manage().window().maximize();*/
 
         WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
