@@ -113,8 +113,6 @@ public class WebTests extends BaseTest {
         shopItemsToBuy.forEach((item, quantity) -> {
             CartItemComponent cartItem = cartPage.getCartItem(item);
             try {
-                cartItem.isLoaded(false);
-
                 Assert.assertEquals(
                         cartItem.getSubtotal(),
                         cartItem.getPrice() * cartItem.getQuantity(),
