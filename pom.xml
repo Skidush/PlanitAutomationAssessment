@@ -19,6 +19,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M7</version>
                 <configuration>
+                    <environmentVariables>
+                        <FROM_MAVEN_SUREFIRE>true</FROM_MAVEN_SUREFIRE>
+                    </environmentVariables>
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>

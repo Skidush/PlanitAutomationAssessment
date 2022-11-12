@@ -21,17 +21,18 @@ public class BaseTest implements Test {
         WebDriverManager.chromedriver().setup();
 
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--no-sandbox");
-        chromeOptions.addArguments("--disable-dev-shm-usage");
-        chromeOptions.addArguments("--remote-debugging-port=9222");
-        chromeOptions.addArguments("--disable-extensions");
-        chromeOptions.addArguments("--headless");
-        chromeOptions.addArguments("--start-maximized");
-        chromeOptions.addArguments("--window-size=1920,1080");
-        driver = new ChromeDriver(chromeOptions);
 
-        // Not headless
-        /*driver.manage().window().maximize();*/
+        if (Boolean.parseBoolean(System.getenv("FROM_MAVEN_SUREFIRE"))) {
+            chromeOptions.addArguments("--no-sandbox");
+            chromeOptions.addArguments("--disable-dev-shm-usage");
+            chromeOptions.addArguments("--remote-debugging-port=9222");
+            chromeOptions.addArguments("--disable-extensions");
+            chromeOptions.addArguments("--headless");
+            chromeOptions.addArguments("--window-size=1920,1080");
+        }
+
+        driver = new ChromeDriver(chromeOptions);
+        driver.manage().window().maximize();
 
         WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
